@@ -1,0 +1,226 @@
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+/* start HEADER */
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  align-items: center;
+}
+
+.header__text {
+  margin-left: auto;
+  margin-right: 50px;
+  span{
+    color: $red;
+  }
+}
+
+.header__btn {
+  padding: 4px;
+  width: 72px;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.header__btn-login {
+  background-color: $green;
+}
+
+.header__btn-register {
+  background-color: $red;
+  margin-left: 7px;
+}
+
+.header__menu {
+  background-color: $bg;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.menu__list {
+  li {
+    display: inline-block;
+    & + li {
+      margin-left: 30px;
+    }
+  }
+  a {
+    color: #fff;
+    font-size: 14px;
+  }
+}
+/* end HEADER */
+
+/* start SEARCH */
+.search {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  min-height: 533px;
+}
+
+.search__inner {
+  /* Верхний падинг был 155, но уменьшили до 142 за счет увеличения высоты строки заголовка. Нижний падинг задаем не до самого низа, чтобы оставить место в запасе, если блок будет расширяться */
+  padding: 142px 0 100px; 
+  color: #fff;
+  text-align: center;
+  &-title {
+    margin-bottom: 8px; /* было 28, но за счет высоты строки уменьшили до 8ми */
+    font-size: 48px;
+    line-height: 72px; /* высоту строки прописываем зачастую 1.5 от размера шрифта */
+    font-weight: 700;
+  }
+  &-text {
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  &-form {
+    max-width: 670px;
+    margin: 0 auto;
+    position: relative;
+    input {
+      display: block;
+      height: 56px;
+      width: 100%;
+      box-shadow: 0px 1px 10px 0px rgba(124, 178, 64, 0.75);
+      border-radius: 4px;
+      border: none;
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: 500;
+      outline: transparent;
+      padding-left: 25px;
+      padding-right: 60px;
+      &::placeholder {
+        color: #90a4ae;
+        font-weight: 500;
+      }
+    }
+    button {
+      position: absolute;
+      border: none;
+      background-color: transparent;
+      right: 20px;
+      top: 16px;
+    }
+  }
+}
+
+/* end SEARCH */
+
+/* start PRODUCTS */
+
+.products {
+  padding: 110px 0;
+  background-color: $grey;
+}
+
+.products__inner-btn {
+  text-align: center;
+  margin-bottom: 60px; /* отступ к блокам с картинкой */
+  button {
+    padding: 12px 21px;
+    border: none;
+    background-color: #fff;
+    color: $bg;
+    cursor: pointer;
+    &+ button {
+      margin-left: 5px;
+    }
+  }
+}
+
+.products__inner-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+  .product__item {
+    max-width: 442px;
+    width: 100%;
+    box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+    margin-bottom: 30px;
+    &-img{
+      display: block;
+      min-height: 250px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      padding: 10px 30px;
+      align-items: center;
+      min-height: 90px;
+      border-bottom: 1px solid #e7ecf2;
+    }
+    &-name {
+        max-width: 310px; /* подобной шириной оставляем место для блока с ценой, чтобы ничего никогда друг на друга не налезало, а переносилось на другую строку */
+    }
+    &-title {
+      color: $bg;
+      line-height: 60pxc;
+      font-size: 18px;
+      display: block;
+    }
+    &-category {
+      font-size: 14px;
+      color: $green;
+      display: block;
+    }  
+    &-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: $bg;
+    }
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 70px;
+      padding: 10px 30px;
+    }
+    &-author {
+      display: flex;
+      align-items: center;
+      .avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        margin-right: 14px;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .products__bottom-btn {
+    margin-top: 45px;
+    button {
+      font-size: 16px;
+      box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+      padding: 18px 33px;
+    }
+  }
+
+/* end PRODUCTS */

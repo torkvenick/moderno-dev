@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $text;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+font-family: 'Roboto-Regular', sans-serif;
+font-size: 15px;
+line-height: 24px;
+color: $text;
+font-weight: 400;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* container-fluid создается для контента, который растягивается на весь экран, то есть больше стандартного контейнера. */
+.container-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* медиа запрос делаем следующим, чтобы на телефонах не был столь большой отступ по бокам. Лучше писать его здесь, а не в самом низу */
+@media (max-width: 720px){
+  .container-fluid {
+    padding: 0 15px;
+  }
+}
+
+.title {
+  color: $bg;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 60px;
+  margin-bottom: 30px;
+  text-align: center; 
+}
