@@ -13,7 +13,8 @@
 .header__text {
   margin-left: auto;
   margin-right: 50px;
-  span{
+
+  span {
     color: $red;
   }
 }
@@ -49,15 +50,18 @@
 .menu__list {
   li {
     display: inline-block;
-    & + li {
+
+    &+li {
       margin-left: 30px;
     }
   }
+
   a {
     color: #fff;
     font-size: 14px;
   }
 }
+
 /* end HEADER */
 
 /* start SEARCH */
@@ -70,25 +74,31 @@
 
 .search__inner {
   /* Верхний падинг был 155, но уменьшили до 142 за счет увеличения высоты строки заголовка. Нижний падинг задаем не до самого низа, чтобы оставить место в запасе, если блок будет расширяться */
-  padding: 142px 0 100px; 
+  padding: 142px 0 100px;
   color: #fff;
   text-align: center;
+
   &-title {
-    margin-bottom: 8px; /* было 28, но за счет высоты строки уменьшили до 8ми */
+    margin-bottom: 8px;
+    /* было 28, но за счет высоты строки уменьшили до 8ми */
     font-size: 48px;
-    line-height: 72px; /* высоту строки прописываем зачастую 1.5 от размера шрифта */
+    line-height: 72px;
+    /* высоту строки прописываем зачастую 1.5 от размера шрифта */
     font-weight: 700;
   }
+
   &-text {
     margin-bottom: 50px;
     font-weight: 500;
     font-size: 20px;
     line-height: 30px;
   }
+
   &-form {
     max-width: 670px;
     margin: 0 auto;
     position: relative;
+
     input {
       display: block;
       height: 56px;
@@ -102,11 +112,13 @@
       outline: transparent;
       padding-left: 25px;
       padding-right: 60px;
+
       &::placeholder {
         color: #90a4ae;
         font-weight: 500;
       }
     }
+
     button {
       position: absolute;
       border: none;
@@ -128,14 +140,17 @@
 
 .products__inner-btn {
   text-align: center;
-  margin-bottom: 60px; /* отступ к блокам с картинкой */
+  margin-bottom: 60px;
+
+  /* отступ к блокам с картинкой */
   button {
     padding: 12px 21px;
     border: none;
     background-color: #fff;
     color: $bg;
     cursor: pointer;
-    &+ button {
+
+    &+button {
       margin-left: 5px;
     }
   }
@@ -147,81 +162,102 @@
   flex-wrap: wrap;
 }
 
-  .product__item {
-    max-width: 442px;
-    width: 100%;
-    box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
-    margin-bottom: 30px;
-    &-img{
-      display: block;
-      min-height: 250px;
+.product__item {
+  max-width: 442px;
+  width: 100%;
+  box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+  margin-bottom: 30px;
+
+  &-img {
+    display: block;
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    padding: 10px 30px;
+    align-items: center;
+    min-height: 90px;
+    border-bottom: 1px solid #e7ecf2;
+  }
+
+  &-name {
+    max-width: 310px;
+    /* подобной шириной оставляем место для блока с ценой, чтобы ничего никогда друг на друга не налезало, а переносилось на другую строку */
+  }
+
+  &-title {
+    color: $bg;
+    line-height: 60pxc;
+    font-size: 18px;
+    display: block;
+  }
+
+  &-category {
+    font-size: 14px;
+    color: $green;
+    display: block;
+  }
+
+  &-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: $bg;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    padding: 10px 30px;
+  }
+
+  &-author {
+    display: flex;
+    align-items: center;
+    max-width: 245px;
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      display: inline-block;
+      margin-right: 14px;
     }
-    &-content {
-      display: flex;
-      justify-content: space-between;
-      font-weight: 500;
-      padding: 10px 30px;
-      align-items: center;
-      min-height: 90px;
-      border-bottom: 1px solid #e7ecf2;
-    }
-    &-name {
-        max-width: 310px; /* подобной шириной оставляем место для блока с ценой, чтобы ничего никогда друг на друга не налезало, а переносилось на другую строку */
-    }
-    &-title {
-      color: $bg;
-      line-height: 60pxc;
-      font-size: 18px;
-      display: block;
-    }
-    &-category {
+
+    span {
       font-size: 14px;
-      color: $green;
-      display: block;
-    }  
-    &-price {
-      font-size: 20px;
-      font-weight: 700;
-      color: $bg;
-    }
-    &-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      min-height: 70px;
-      padding: 10px 30px;
-    }
-    &-author {
-      display: flex;
-      align-items: center;
-      .avatar {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: inline-block;
-        margin-right: 14px;
-      }
-      span {
-        font-size: 14px;
-        font-weight: 500;
-      }
+      font-weight: 500;
     }
   }
 
-  .products__bottom-btn {
-    margin-top: 45px;
-    button {
-      font-size: 16px;
-      box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
-      padding: 18px 33px;
+  &-star {
+    font-size: 12px;
+
+    span {
+      color: $bg;
     }
   }
+}
+
+.products__bottom-btn {
+  margin-top: 45px;
+
+  button {
+    font-size: 16px;
+    box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+    padding: 18px 33px;
+  }
+}
 
 /* end PRODUCTS */
 
@@ -229,5 +265,37 @@
 
 .product-slider {
   padding: 110px 0 120px;
+
+  .slick-track {
+    margin-bottom: 40px;
+  }
+
+  .slick-dots {
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 3px 0 4px;
+      
+      button {
+        width: 16px;
+        height: 16px;
+        border: transparent;
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        color: #e8e8e8;
+        font-size: 0;
+        cursor: pointer;
+        outline: transparent;
+      }
+    }
+  }
+  .slick-active {
+    button {
+      background-color: #8bc34a;
+      border: transparent;
+    }
+  }
 }
-/* end product-slider */
+
+/* end product-slider */ 
