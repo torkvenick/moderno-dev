@@ -423,8 +423,164 @@
     background-color: #fff;
     font-size: 18px;
     line-height: 2;
-    color: #263238;
+    color: $bg;
   }
 }
 
 /* end author */
+
+/* Start tutorial */
+
+.tutorial {
+  padding: 60px 0 90px;
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+    @include f700;
+    font-size: 36px;
+    line-height: 1.7;
+    color: $bg;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    margin: 0 30px 30px 0;
+  }
+
+  &__img {
+    min-height: 270px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  &__text {
+    padding: 20px 0;
+    background-color: #f8f8f8;
+    @include f700;
+    font-size: 24px;
+    line-height: 1.6;
+  }
+}
+
+/* End tutorial */
+
+/* Start footer */
+
+.footer {
+  background-color: $bg;
+
+  &__inner {
+    padding: 110px 0 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__about {
+    max-width: 270px;
+  }
+  
+  &__title {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.1;
+    color:  #fff;
+    &::before {
+      content: '';
+      width: 55px;
+      height: 3px;
+      position: absolute;
+      bottom: 0;
+      background-color: $green;
+    }
+  }
+  
+  &__text {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #b7c3c8;
+  }
+  
+  &__link {
+    padding-left: 30px;
+    position: relative;
+    font-family: 'Lato-Regular', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #fff;   
+    
+    svg {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 0;
+      fill: $green;
+    }
+  }
+
+  &__join {
+    max-width: 230px;
+  }
+
+  &__support {
+    max-width: 190px;
+  }
+
+  &__social {
+    max-width: 260px;
+  }
+
+  &__social-icons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__social-icon {
+    margin-right: 7px;
+  }
+  
+  &__social-link {
+  }
+  
+  &__bottom {
+  }
+}
+
+.footer-list {
+  font-size: 15px;
+  line-height: 2.4;
+  color: #b7c3c8;
+  
+  &__item {
+  }
+  
+  &__link {
+    position: relative;
+    padding-left: 25px;
+
+    svg {
+      width: 8px;
+      height: 13px;
+      position: absolute;
+      left: 0;
+      top: 10px;
+      fill: $green;
+    }
+  }
+}
+
+/* End footer */
+
