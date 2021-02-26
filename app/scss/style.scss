@@ -342,14 +342,12 @@
     }
 
     &-images {
-      margin: 0 auto;
-      width: 113px;
-      height: 113px;
+      margin: 0 auto 30px;
+      width: 114px;
+      height: 114px;
       border-radius: 50%;
       background-color: #fff;
-      margin-bottom: 30px;
       transition: background-color 0.3s;
-      font-size: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -371,23 +369,6 @@
   }
 }
 
-.icosvg-1 {
-  svg {
-    width: 50px;
-  }
-}
-
-.icosvg-2 {
-  svg {
-    width: 70px;
-  }
-}
-
-.icosvg-3 {
-  svg {
-    width: 86px;
-  }
-}
 
 /* end advantages */
 
@@ -410,7 +391,7 @@
     background-color: #8bc34a;
     color: #fff;
   }
-  
+
   &__title {
     max-width: 290px;
     margin-right: 45px;
@@ -461,7 +442,7 @@
     background-size: cover;
     background-position: center;
   }
-  
+
   &__text {
     padding: 20px 0;
     background-color: #f8f8f8;
@@ -483,11 +464,11 @@
     display: flex;
     justify-content: space-between;
   }
-  
+
   &__about {
     max-width: 270px;
   }
-  
+
   &__title {
     position: relative;
     margin-bottom: 30px;
@@ -495,7 +476,8 @@
     font-size: 22px;
     font-weight: 700;
     line-height: 1.1;
-    color:  #fff;
+    color: #fff;
+
     &::before {
       content: '';
       width: 55px;
@@ -505,14 +487,14 @@
       background-color: $green;
     }
   }
-  
+
   &__text {
     margin-bottom: 30px;
     font-size: 15px;
     line-height: 1.6;
     color: #b7c3c8;
   }
-  
+
   &__link {
     padding-left: 30px;
     position: relative;
@@ -520,15 +502,14 @@
     font-style: normal;
     font-size: 14px;
     line-height: 1.7;
-    color: #fff;   
-    
-    svg {
-      width: 15px;
-      height: 15px;
-      position: absolute;
-      left: 0;
-      fill: $green;
-    }
+    color: #fff;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    color: $green;
   }
 
   &__join {
@@ -541,6 +522,7 @@
 
   &__social {
     max-width: 260px;
+    width: 100%;
   }
 
   &__social-icons {
@@ -551,36 +533,59 @@
   &__social-icon {
     margin-right: 7px;
   }
-  
-  &__social-link {
+
+  &__form-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #fff;
   }
-  
-  &__bottom {
-  }
+
+  &__bottom {}
 }
 
 .footer-list {
   font-size: 15px;
   line-height: 2.4;
   color: #b7c3c8;
-  
-  &__item {
-  }
-  
+
+  &__item {}
+
   &__link {
     position: relative;
     padding-left: 25px;
 
-    svg {
-      width: 8px;
-      height: 13px;
-      position: absolute;
-      left: 0;
-      top: 10px;
-      fill: $green;
+    span {
+      top: 25%;
     }
   }
 }
 
-/* End footer */
+.form {
 
+  &__body {
+    display: flex;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0 10px 0 15px;
+    background-color: #2f3c43;
+    border-width: 1px 0 0 1px;
+    font-size: 14px;
+    line-height: 2.6;
+    color: #697378;
+  }
+
+  &__btn {
+    background-color: $green;
+    padding: 0 10px;
+    border-width: 1px 1px 0 0;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #fff;
+
+  }
+}
+
+/* End footer */
