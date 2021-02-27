@@ -337,6 +337,7 @@
       }
 
       svg {
+        stroke: #fff;
         fill: #fff;
       }
     }
@@ -362,7 +363,6 @@
     }
 
     &-text {
-      font-size: 15px;
       line-height: 24px;
       color: #b0bec5;
     }
@@ -490,12 +490,11 @@
 
   &__text {
     margin-bottom: 30px;
-    font-size: 15px;
     line-height: 1.6;
     color: #b7c3c8;
   }
 
-  &__link {
+  &__info {
     padding-left: 30px;
     position: relative;
     font-family: 'Lato-Regular', sans-serif;
@@ -503,6 +502,16 @@
     font-size: 14px;
     line-height: 1.7;
     color: #fff;
+  }
+
+  &__list {
+    color: #b7c3c8;
+  }
+
+  &__link {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
   }
 
   &__icon {
@@ -521,7 +530,7 @@
   }
 
   &__social {
-    max-width: 260px;
+    max-width: 260px; 
     width: 100%;
   }
 
@@ -541,23 +550,12 @@
     color: #fff;
   }
 
-  &__bottom {}
-}
-
-.footer-list {
-  font-size: 15px;
-  line-height: 2.4;
-  color: #b7c3c8;
-
-  &__item {}
-
-  &__link {
-    position: relative;
-    padding-left: 25px;
-
-    span {
-      top: 25%;
-    }
+  &__bottom {
+    padding: 18px 0;
+    border-top: 1px solid #424d53;
+    text-align: center;
+    line-height: 2.4;
+    color: #919699;
   }
 }
 
@@ -584,7 +582,6 @@
     font-size: 20px;
     line-height: 1.8;
     color: #fff;
-
   }
 }
 
