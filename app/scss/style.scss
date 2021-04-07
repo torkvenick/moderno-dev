@@ -70,6 +70,24 @@
   background-size: cover;
   background-position: center;
   min-height: 533px;
+
+  &.page-search {
+    min-height: 230px;
+
+    .search__inner {
+      padding: 55px 0 70px;
+
+      &-text {
+        margin-bottom: 20px;
+      }
+
+      &-form {
+        input {
+          box-shadow: 0px 1px 10px 0px rgba(100, 100, 100, 0.75);
+        }
+      }
+    }
+  }
 }
 
 .search__inner {

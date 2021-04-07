@@ -8,6 +8,28 @@ html {
   box-sizing: inherit;
 }
 
+//Start Для прижатия подвала к низу
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+//End Для прижатия подвала к низу
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -22,11 +44,11 @@ li {
 }
 
 body {
-font-family: 'Roboto-Regular', sans-serif;
-font-size: 15px;
-line-height: 1.6;
-color: $text;
-font-weight: 400;
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: $text;
+  font-weight: 400;
 }
 
 .container {
@@ -43,10 +65,14 @@ font-weight: 400;
 }
 
 /* медиа запрос делаем следующим, чтобы на телефонах не был столь большой отступ по бокам. Лучше писать его здесь, а не в самом низу */
-@media (max-width: 720px){
+@media (max-width: 720px) {
   .container-fluid {
     padding: 0 15px;
   }
+}
+
+.page-content {
+  background-color: $grey;
 }
 
 .title {
@@ -54,12 +80,12 @@ font-weight: 400;
   @include f700;
   font-size: 36px;
   margin-bottom: 30px;
-  text-align: center; 
+  text-align: center;
 }
 
 .rate-star {
   display: inline-block;
-  margin-right: 13px;  
+  margin-right: 13px;
 }
 
 //Вспомогательныве классы
@@ -81,4 +107,41 @@ font-weight: 400;
   top: 0;
   font-size: 0;
   overflow: hidden;
+}
+
+//start breadcrumbs
+.breadcrumbs {
+
+  &__inner {
+    padding: 45px 0 40px;
+  }
+
+  &__list {
+    li {
+      display: inline-block;
+      position: relative;
+
+      &+li {
+        padding-left: 24px;
+
+        &::before {
+          content: '-';
+          left: 7px;
+          position: absolute;
+          color: $green;
+        }
+      }
+      /* последний элемент может быть span, поэтому на всякий случай задаем ему тоже цвет */
+      &:last-child {
+        a,
+        span {
+          color: $bg;
+        }
+      }
+    }
+
+    a {
+      color: #b0bec5;
+    }
+  }
 }
